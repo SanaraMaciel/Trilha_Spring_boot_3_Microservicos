@@ -32,14 +32,18 @@ public class Medico {
 
 	private String crm;
 
+	private Boolean ativo;
+
 	@Enumerated(EnumType.STRING)
 	private Especialidade especialidade;
 
-	//fica em uma classe separada, ams no banco de dados ele fica na msm tabela de medico
+	// fica em uma classe separada, ams no banco de dados ele fica na msm tabela de
+	// medico
 	@Embedded
 	private Endereco endereco;
 
 	public Medico(DadosCadastroMedico dados) {
+		this.ativo = true;
 		this.nome = dados.nome();
 		this.email = dados.email();
 		this.telefone = dados.telefone();
@@ -47,13 +51,27 @@ public class Medico {
 		this.especialidade = dados.especialidade();
 		this.endereco = new Endereco(dados.endereco());
 	}
-	
 
 	public Medico() {
 		super();
 	}
 
+	public void atualizarInformacoes(DadosAtualizacaoMedico dados) {
+		if (dados.nome() != null) {
+			this.nome = dados.nome();
+		}
+		if (dados.telefone() != null) {
+			this.telefone = dados.telefone();
+		}
+		if (dados.endereco() != null) {
+			this.endereco.atualizarInformacoes(dados.endereco());
+		}
 
+	}
+
+	public void excluir() {
+		this.ativo = false;
+	}
 
 	public Long getId() {
 		return id;
