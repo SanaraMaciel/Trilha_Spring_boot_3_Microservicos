@@ -1,0 +1,17 @@
+Alterando a porta que o projeto Spring irá rodar 
+
+server.port=${port:8081}
+
+
+Configurando o usuário e email do git no projeto:
+git config --global user.name "Sanara Felicio"
+git config --global user.email "sanarafm27@gmail.com"
+
+
+comando para adicionar todas as alterações no git : git add .
+
+comando para associar/vincular o projeto na máquina com o que está no git hub:
+git remote add origin git@github.com:SanaraMaciel/cursospring.git
+
+enviando as alterações da máquina para o remoto:
+git push -u origin main
