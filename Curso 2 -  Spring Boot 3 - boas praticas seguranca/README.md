@@ -54,7 +54,7 @@ Ainda há muitos recursos a explorar no Spring Boot, como a documentação da AP
 ## 🧑‍💻 Feito por:
 Samil Moret
 
-[![LinkedIn](https://img.icons8.com/color/48/linkedin.png)](https://www.linkedin.com/in/samilmoret/)
+[![LinkedIn](https://img.icons8.com/color/48/linkedin.png)](https://www.linkedin.com/in/sanara-maciel-felicio-99521bb8/)
 [![WhatsApp](https://img.icons8.com/color/48/whatsapp--v1.png)](https://linkwhats.app/f27e11)
 
 **Curso concluído: Spring Boot 3: aplique boas práticas e proteja uma API Rest** pela [Alura](https://www.alura.com.br/).
