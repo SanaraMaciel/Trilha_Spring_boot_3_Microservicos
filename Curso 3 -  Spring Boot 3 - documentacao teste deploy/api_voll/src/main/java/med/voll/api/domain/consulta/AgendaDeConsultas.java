@@ -3,8 +3,12 @@ package med.voll.api.domain.consulta;
 import med.voll.api.domain.medico.Medico;
 import med.voll.api.domain.medico.MedicoRepository;
 import med.voll.api.domain.paciente.PacienteRepository;
+import med.voll.api.domain.validacoes.agendamento.ValidadorAgendamentoDeConsulta;
+import med.voll.api.domain.validacoes.cancelamento.ValidadorCancelamentoDeConsulta;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class AgendaDeConsultas {
@@ -18,6 +22,14 @@ public class AgendaDeConsultas {
     @Autowired
     private PacienteRepository pacienteRepository;
 
+    //injeta todas as classes que implementam da interface de validacao
+    @Autowired
+    private List<ValidadorAgendamentoDeConsulta> validadores;
+
+    //injeta todas as classes que implementam da interface de validacao
+    @Autowired
+    private List<ValidadorCancelamentoDeConsulta> validadoresCancelamento;
+
     public DadosDetalhamentoConsulta agendar(DadosAgendamentoConsulta dados) {
 
         if (!pacienteRepository.existsById(dados.idPaciente())) {
@@ -27,6 +39,9 @@ public class AgendaDeConsultas {
         if (dados.idMedico() != null && !medicoRepository.existsById(dados.idMedico())) {
             throw new ValidacaoException("Id do médico informado não existe!");
         }
+
+        //faz a chamada de todas as classes de validacao que foram criadas implementando a interface
+        validadores.forEach(v ->v.validar(dados));
 
         var paciente = pacienteRepository.findById(dados.idPaciente()).get();
         var medico = escolherMedico(dados);
@@ -54,6 +69,9 @@ public class AgendaDeConsultas {
             throw new ValidacaoException("Id da consulta informado não existe!");
         }
 
+        //faz a chamada de todas as classes de validacao que foram criadas implementando a interface
+        validadoresCancelamento.forEach(v ->v.validar(dados));
+        
         var consulta = consultaRepository.getReferenceById(dados.idConsulta());
         consulta.cancelar(dados.motivo());
     }
