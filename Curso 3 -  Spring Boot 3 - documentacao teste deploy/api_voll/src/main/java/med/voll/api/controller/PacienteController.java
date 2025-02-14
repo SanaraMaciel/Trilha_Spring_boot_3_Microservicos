@@ -1,5 +1,6 @@
 package med.voll.api.controller;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import med.voll.api.domain.paciente.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,8 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.util.List;
 
 @RestController
+@SecurityRequirement(name = "bearer-key") //anotação para deixar o metodo ou classe restrito pelo swagger
+// esse valor de name DEVE bater com o valor setado la em SpringDocConfigurations
 @RequestMapping("pacientes")
 public class PacienteController {
 
