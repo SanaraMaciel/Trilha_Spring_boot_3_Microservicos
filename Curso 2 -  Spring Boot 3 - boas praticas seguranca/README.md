@@ -51,10 +51,9 @@ Este projeto foi desenvolvido durante o curso **Spring Boot 3: aplique boas prá
 Ainda há muitos recursos a explorar no Spring Boot, como a documentação da API, novas funcionalidades conforme o Trello, e testes automatizados.
 
 ---
-## 🧑‍💻 Feito por:
-Samil Moret
+## 🧛🏽‍♀️ Feito por:
+Sanara Maciel Felício
 
 [![LinkedIn](https://img.icons8.com/color/48/linkedin.png)](https://www.linkedin.com/in/sanara-maciel-felicio-99521bb8/)
-[![WhatsApp](https://img.icons8.com/color/48/whatsapp--v1.png)](https://linkwhats.app/f27e11)
 
 **Curso concluído: Spring Boot 3: aplique boas práticas e proteja uma API Rest** pela [Alura](https://www.alura.com.br/).
