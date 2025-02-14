@@ -28,6 +28,13 @@ Aprendemos a aprimorar um projeto existente em Spring Boot, adicionando novas fu
 
 Ao final do curso, adquirimos habilidades essenciais para desenvolver, documentar, testar e preparar uma API Spring Boot para deployment. Este projeto é uma excelente base para expandir seu conhecimento em desenvolvimento de APIs robustas e escaláveis.
 
+---
+## 🧛🏽‍♀️ Feito por:
+Sanara Maciel Felício
+
+[![LinkedIn](https://img.icons8.com/color/48/linkedin.png)](https://www.linkedin.com/in/sanara-maciel-felicio-99521bb8/)
+
+
 ## 🌟 Contribuição
 
 Sinta-se à vontade para contribuir com melhorias através de issues ou pull requests!
