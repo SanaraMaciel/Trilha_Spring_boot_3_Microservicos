@@ -17,8 +17,8 @@ public record DadosAgendamentoConsulta(
 
         @NotNull
         @Future
-       // @JsonAlias("data_consulta") ou @JsonAlias({"data_consulta", "data_consulta_medica"}) usado como propertie para dar um alias diferente no cliente front
-        @JsonFormat(pattern = "dd/MM/yyyy HH:mm") //formata o campo de data para o padrao desejado
+        // @JsonAlias("data_consulta") ou @JsonAlias({"data_consulta", "data_consulta_medica"}) usado como propertie para dar um alias diferente no cliente front
+        // @JsonFormat(pattern = "dd/MM/yyyy HH:mm") //formata o campo de data para o padrao desejado
         LocalDateTime data,
 
         Especialidade especialidade) {
