@@ -1,7 +1,9 @@
 package med.voll.api.infra.security;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -10,17 +12,26 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.DefaultSecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
 @EnableWebSecurity //indica ao spring que vamos personalizar as configuracoes de seguranca
 public class securityConfigurations {
+
+    @Autowired
+    private SecurityFilter securityFilter;
 
     /* serve para exportar uma classe para o spring, fazendo com que ele consga carrega-la e realize a sua injecao de
     dependencia em outras classes */
     @Bean
     public DefaultSecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.csrf().disable() //desabilita os erros de cors
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and().build();
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                .and().authorizeHttpRequests()
+                .antMatchers(HttpMethod.POST, "/login").permitAll()
+                .anyRequest().authenticated()
+                .and().addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
+                .build();
     }
 
     @Bean
@@ -44,5 +55,18 @@ public class securityConfigurations {
                 .sessionManagement(sm -> sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .build();
     }*/
+
+    /* versao atualizada para 3.2
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        return
+                http.csrf(csrf -> csrf.disable())
+                        .sessionManagement(sm -> sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                        .authorizeHttpRequests(req -> {
+                            req.requestMatchers("/login").permitAll();
+                            req.anyRequest().authenticated();
+                        })
+                        .build();
+    } */
 
 }
