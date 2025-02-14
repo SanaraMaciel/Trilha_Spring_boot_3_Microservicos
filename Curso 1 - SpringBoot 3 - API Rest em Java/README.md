@@ -26,9 +26,7 @@ Neste projeto, desenvolvi uma API REST utilizando Spring Boot, implementando um 
 - ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 
 ---
+## 🧛🏽‍♀️ Feito por:
+Sanara Maciel Felício
 
-## 🧑‍💻 Feito por:
-Samil Moret
-
-[![LinkedIn](https://img.icons8.com/color/48/linkedin.png)](https://www.linkedin.com/in/samilmoret/)
-[![WhatsApp](https://img.icons8.com/color/48/whatsapp--v1.png)](https://linkwhats.app/f27e11)
+[![LinkedIn](https://img.icons8.com/color/48/linkedin.png)](https://www.linkedin.com/in/sanara-maciel-felicio-99521bb8/)
