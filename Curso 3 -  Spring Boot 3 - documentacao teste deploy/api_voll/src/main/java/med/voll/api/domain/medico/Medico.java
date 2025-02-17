@@ -52,10 +52,6 @@ public class Medico {
 		this.endereco = new Endereco(dados.endereco());
 	}
 
-	/*public Medico() {
-		super();
-	} */
-
 	public void atualizarInformacoes(DadosAtualizacaoMedico dados) {
 		if (dados.nome() != null) {
 			this.nome = dados.nome();

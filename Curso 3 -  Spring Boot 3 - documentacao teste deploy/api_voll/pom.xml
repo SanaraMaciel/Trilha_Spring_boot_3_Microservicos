@@ -68,6 +68,7 @@
             <artifactId>flyway-mysql</artifactId>
         </dependency>
 
+        <!-- essa dependencia ja adiciona mockito, junit e outras dependencias para fazer testes unitarios e automatizados no spring-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
