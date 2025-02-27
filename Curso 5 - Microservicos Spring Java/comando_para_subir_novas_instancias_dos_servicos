@@ -1,0 +1,12 @@
+
+o comando só funciona para windows:
+
+& "c:\alura-food\pedidos\mvnw.cmd" spring-boot:run -f "c:\alura-food\pedidos\pom.xml"
+
+
+No linux ou Ubuntu é necessário abrir o terminal na pasta do projeto e executar o comando: mvn package
+
+- será gerada na pasta target com o nome pedidos-0.0.1-SNAPSHOT.jar -- navegue ate a pasta e execute o seguinte comando:
+
+java -jar pedidos-0.0.1-SNAPSHOT.jar
+

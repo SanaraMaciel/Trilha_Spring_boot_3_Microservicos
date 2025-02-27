@@ -1,0 +1,27 @@
+client-side e server-side discovery
+
+Como citei nesta aula, trabalhar com uma arquitetura de microsserviços tem seus desafios, pois as instâncias dos serviços muitas vezes tem suas URLs geradas dinamicamente, podendo ser alteradas o tempo todo, inclusive por conta de atualizações ou autoscaling, que é o escalonamento automático, de acordo com a necessidade. Por conta disso, é necessário que o código do cliente “descubra” também de forma dinâmica quais os endereços disponíveis das instâncias dos serviços com os quais ele deseja se comunicar. A isso, damos o nome de service discovery.
+
+O serviço de descoberta acontece basicamente em duas etapas. Na primeira, é necessário ter um serviço ou mecanismo onde cada instância faça o seu registro. Na segunda, é necessário que exista uma forma para que esse serviço seja localizado por outro serviço (que podemos chamar de “cliente” ou “consumidor”).
+
+Para essa primeira etapa, que damos o nome de service registry, onde será gerado uma espécie de catálogo com todas as URLs dos endereços dos serviços e suas instâncias, usaremos o Eureka Server, que faz parte do pacote Spring Cloud Netflix.
+
+O Eureka Server é um serviço REST que será responsável por “conhecer” todas as nossas instâncias de serviços. Para isso, basta criar um novo projeto pelo site do Spring e selecionar a dependência Eureka Server, conforme imagem abaixo.
+
+Também é possível incluir a dependência diretamente no arquivo pom.xml, indicando o artefato spring-cloud-starter-netflix-eureka-server, conforme imagem abaixo:
+
+Tela do IntelliJ, com fundo preto, demonstrando a dependência do Eureka Server incluída diretamente no arquivo pom.xml
+
+Para que esse serviço conheça as nossas instâncias, utiliza-se um padrão chamado self registration, onde cada instância deverá se auto-registrar no servidor. É o que veremos no próximo vídeo, onde usaremos o Eureka Client para que o microsserviço de pagamentos seja registrado e possa ser localizado pelo nome. Esse procedimento é bem simples, como irei demonstrar, basta incluir uma dependência no arquivo pom.xml e fazer poucas configurações.
+
+Existe também a possibilidade de aplicações de terceiros fazerem esse registro.
+
+Podemos dizer que existem dois padrões principais de service discovery: client-side (descoberta do lado cliente) e server-side (descoberta do lado servidor).
+
+No client-side discovery, o cliente (no caso o microsserviço ou o API Gateway) consulta o service registry, obtém a lista de instâncias do serviço que ele quer consumir e ele próprio é responsável por fazer o balanceamento de carga, escolhendo para qual instância irá direcionar a requisição (quando houver mais de uma instância do serviço que ele precisa consumir registrada). Veremos isso na aula em que abordo sobre balanceamento de carga.
+
+No server-side discovery ao invés do cliente consultar diretamente o service registry, é feita uma solicitação para uma camada intermediária como um DNS ou roteador, por exemplo, que faz a consulta ao service registry e o load balancing (balanceamento de carga), já encaminhando a requisição a uma das instâncias, garantindo que nenhum servidor seja sobrecarregado e desacoplando essa lógica do cliente.
+
+A seguir vamos configurar o nosso microsserviço de pagamento e ver todo esse fluxo de service discovery de forma prática.
+
+

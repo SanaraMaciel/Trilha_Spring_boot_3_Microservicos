@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7c20b6f5-eca8-4a82-b81a-d71bfc52e0b4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../api_gateway_desvantagem.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../api_gateway_estrutura.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client-side e server-side discovery - explicacao" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../comando_para_subir_novas_instancias_dos_servicos" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gateway/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gateway/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gateway/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gateway/.idea/gateway.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gateway/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gateway/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gateway/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gateway/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gateway/gateway/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gateway/gateway/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gateway/gateway/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gateway/gateway/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gateway/gateway/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gateway/gateway/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gateway/gateway/src/main/java/br/com/alurafood/gateway/GatewayApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gateway/gateway/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../gateway/gateway/src/test/java/br/com/alurafood/gateway/GatewayApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pedidos/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pedidos/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pedidos/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pedidos/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pedidos/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pedidos/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pedidos/src/main/java/br/com/alurafood/pedidos/PedidosApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pedidos/src/main/java/br/com/alurafood/pedidos/config/Configuracao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pedidos/src/main/java/br/com/alurafood/pedidos/controller/PedidoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pedidos/src/main/java/br/com/alurafood/pedidos/dto/ItemDoPedidoDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pedidos/src/main/java/br/com/alurafood/pedidos/dto/PedidoDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pedidos/src/main/java/br/com/alurafood/pedidos/dto/StatusDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pedidos/src/main/java/br/com/alurafood/pedidos/model/ItemDoPedido.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pedidos/src/main/java/br/com/alurafood/pedidos/model/Pedido.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pedidos/src/main/java/br/com/alurafood/pedidos/model/Status.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pedidos/src/main/java/br/com/alurafood/pedidos/repository/PedidoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pedidos/src/main/java/br/com/alurafood/pedidos/service/PedidoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pedidos/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pedidos/src/main/resources/db/migration/V1__cria_tabela_pedidos.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pedidos/src/main/resources/db/migration/V2__cria_tabela_item_pedido.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pedidos/src/test/java/br/com/alurafood/pedidos/PedidosApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pagamentos/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pagamentos/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pagamentos/src/main/java/br/com/alurafood/pagamentos/PagamentosApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../pagamentos/src/main/java/br/com/alurafood/pagamentos/PagamentosApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pagamentos/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../pagamentos/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2td4CqrrxWt0by6HoyWzKh6hHMx" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ServerApplication.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/l/disk0/sanara/Documentos/Cursos/spring_boot_3/Curso 5 - Microservicos Spring Java/server"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="ServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.alurafood.server.ServerApplication" />
+      <module name="server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.alurafood.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ServerApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7c20b6f5-eca8-4a82-b81a-d71bfc52e0b4" name="Changes" comment="" />
+      <created>1740668492287</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1740668492287</updated>
+    </task>
+    <servers />
+  </component>
+</project>
