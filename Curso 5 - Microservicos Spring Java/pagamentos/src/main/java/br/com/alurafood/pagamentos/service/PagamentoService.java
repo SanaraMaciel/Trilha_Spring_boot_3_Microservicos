@@ -37,7 +37,9 @@ public class PagamentoService {
         Pagamento pagamento = repository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException());
 
-        return modelMapper.map(pagamento, PagamentoDto.class);
+        PagamentoDto dto = modelMapper.map(pagamento, PagamentoDto.class);
+        dto.setItens(pedido.obterItensDoPedido(pagamento.getPedidoId()).getItens());
+        return dto;
     }
 
     public PagamentoDto criarPagamento(PagamentoDto dto) {
@@ -73,7 +75,6 @@ public class PagamentoService {
     }
 
     /**
-     *
      * @param id
      */
     public void alteraStatus(Long id) {
