@@ -1,0 +1,24 @@
+Circuit Breaker e Fallback
+
+Anteriormente vimos um pouco sobre a comunicação síncrona. No microsserviço de pagamentos fizemos uma chamada para um método patch informando querermos confirmar o pagamento e o service fazia com open feign uma nova chamada ao microsserviço de pedidos, para passar que o pedido foi confirmado.
+
+Esse processo funciona bem quando está tudo operando corretamente, mas quando trabalhamos com sistemas distribuídos precisamos ter certos cuidados, visto que uma falha em uma das comunicações, um serviço que esteja lento ou fora do ar pode gerar falhas em cascata.
+
+Por isso, tem um padrão de estabilidade e resiliência denominado circuit breaker. Este é como se fosse um disjuntor, que possui o estado de aberto e fechado.
+
+Vamos usar o Resilience 4j , que trabalha com Spring e é exemplificado através da seguinte imagem: open -> half_open -> closed
+
+
+Um circuit breaker possui três estados. Quando está fechado significa que todos os sistemas estão operando e as comunicações estão sendo feitas com sucesso, sendo o melhor estado. Se houver uma taxa de falhas acima do determinado como padrão, ele entra em estado aberto.
+
+No estado aberto ele realiza uma quebra e para de tentar se comunicar com outro serviço. É possível programar o que chamamos fallback, um plano B, que indica o comportamento do sistema caso tenha uma falha que não consigamos realizar essa ação.
+
+Tem algumas configurações de tempo que também podemos incluir. Para que depois de um determinado tempo que esteja com o estado aberto, seja passado para semiaberto e se as requisições passarem com sucesso, retorna para o estado fechado. Se continuar falhando, ele retorna para o estado aberto.
+
+Tem todo esse fluxo que o Resilience 4j implementa para nós automaticamente. Na documentação temos alguns exemplos, basicamente temos que incluir duas dependências no projeto. Ele também possui um sistema que é possível fazer o controle por instância.
+
+Cada método que vai se comunicar com algum serviço, podemos nomear com nome de instância e ter comportamentos diferentes. Por exemplo, ao tentarmos nos comunicar com pagamento, o nome vai ser "atualiza pagamento" e teremos configurações específicas para esse método.
+
+Ao tentarmos nos comunicar com o restaurante, utilizaremos outro nome de instância daquele circuit breaker. Para isso podemos ter configurações diferenciadas para esse circuit breaker também.
+
+

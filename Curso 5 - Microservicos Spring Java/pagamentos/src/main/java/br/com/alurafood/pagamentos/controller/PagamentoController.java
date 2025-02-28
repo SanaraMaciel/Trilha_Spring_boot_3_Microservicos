@@ -2,7 +2,7 @@ package br.com.alurafood.pagamentos.controller;
 
 import br.com.alurafood.pagamentos.dto.PagamentoDto;
 import br.com.alurafood.pagamentos.service.PagamentoService;
-import org.modelmapper.ModelMapper;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -10,7 +10,6 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
-
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -57,10 +56,20 @@ public class PagamentoController {
         return ResponseEntity.noContent().build();
     }
 
-    //@PatchMapping("/{id}/confirmar")
+    //@PatchMapping("/{id}/confirmar") comentado porque a comunicação com ms exterior nao funcionou com patch
+    @CircuitBreaker(name = "atualizaPedido", fallbackMethod = "pagamentoAutorizadoComIntegracaoPendente")
     @PutMapping("/{id}/confirmar")
     public void confirmarPagamento(@PathVariable @NotNull Long id){
         service.confirmarPagamento(id);
+    }
+
+    /**
+     * metodo fallback que eh um plano B, que indica o comportamento do sistema caso tenha uma falha que não consigamos realizar essa ação.
+     * @param id
+     * @param e
+     */
+    public void pagamentoAutorizadoComIntegracaoPendente(Long id, Exception e){
+        service.alteraStatus(id);
     }
 
 }
