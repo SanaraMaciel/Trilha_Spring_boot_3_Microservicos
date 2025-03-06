@@ -26,6 +26,10 @@ Trilha de cursos e projetos pessoais em Spring Boot 3 com diversas implementaç�
 - Microserviços em nuvem utilizando containers Docker e diversos recursos da AWS, como CDK, ECS, ECR, Fargate e RDS.
 - Mensageria com RabbitMQ
 
+
+  ℹ️ Links úteis e explicações:
+  - Desvendando o DockerFile: https://www.alura.com.br/artigos/desvendando-o-dockerfile
+
 ---
 ## 🧛🏽‍♀️ Feito por:
 Sanara Maciel Felício
