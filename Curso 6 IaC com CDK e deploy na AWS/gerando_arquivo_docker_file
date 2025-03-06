@@ -1,0 +1,13 @@
+FROM openjdk:17-alpine --> indica a partir de qual imagem pré existente vai gerar a nossa imagem
+RUN addgroup -S spring && adduser -S spring -G spring --> cria um grupo e um usuário spring para não dar erros com usuário de root
+USER spring:spring 
+ARG JAR_FILE=target/*.jar -->linha de argumento faz referencia ao arquivos na pasta /target
+COPY ${JAR_FILE} app.jar --> copia o arquivo do target para nosso container com o nome de app.jar 
+ENTRYPOINT ["java","-jar","/app.jar"] --> para rodar o app.jar que ele copiou
+
+
+
+Obs: para poder fazer essa cópia desse jar para o nosso container é necessário antes criar o arquivo jar na pasta target com o seguinte comando:
+
+1. Abra o terminal no intellij 
+2. execute o comando mvn clean package
