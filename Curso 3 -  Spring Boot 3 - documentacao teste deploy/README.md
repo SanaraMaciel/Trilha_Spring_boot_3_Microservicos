@@ -23,6 +23,7 @@ Aprendemos a aprimorar um projeto existente em Spring Boot, adicionando novas fu
 - Documentação da API com SpringDoc (Swagger) para facilitar o entendimento e uso da API por outros desenvolvedores.
 - Testes automatizados de componentes do Spring: Repository e Controller.
 - Preparação para deploy em ambiente de produção, incluindo configuração de profiles e variáveis de ambiente.
+- IaC - Infraestrutura como Código
 
 ## 🎓 Conclusão
 
