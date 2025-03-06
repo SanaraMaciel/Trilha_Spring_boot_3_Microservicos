@@ -14,7 +14,7 @@ Trilha de cursos e projetos pessoais em Spring Boot 3 com diversas implementaç�
 - JUnit ![JUnit](https://img.shields.io/badge/JUnit-red)
 - Mockito ![Mockito](https://img.shields.io/badge/Mockito-yellow)
 - Spting Cloud ![Spring Cloud](https://spring.io/projects/spring-cloud)
-- 
+- - IaC - Infraestrutura como Código
 ## 📚 Tópicos Abordados
 
 - Programação reativa e assíncrona com Spring
