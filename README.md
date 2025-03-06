@@ -7,13 +7,13 @@ Trilha de cursos e projetos pessoais em Spring Boot 3 com diversas implementaç�
 
 ## 🛠️ Tecnologias Utilizadas
 
-- Spring Boot ![Spring Boot]
+- Spring Boot
 - SpringDoc (Swagger) 
-- Maven ![Maven]
-- MySQL ![MySQL]
-- JUnit ![JUnit]
-- Mockito ![Mockito]
-- Spting Cloud ![Spring Cloud](https://spring.io/projects/spring-cloud)
+- Maven 
+- MySQL 
+- JUnit 
+- Mockito 
+- Spting Cloud 
 - IaC - Infraestrutura como Código
 
 ## 📚 Tópicos Abordados
@@ -30,7 +30,13 @@ Trilha de cursos e projetos pessoais em Spring Boot 3 com diversas implementaç�
 
   ℹ️ Links úteis e explicações:
   - Desvendando o DockerFile: https://www.alura.com.br/artigos/desvendando-o-dockerfile
+  - Spring IO: https://spring.io/projects/spring-cloud
+  - O que é DevOPS: https://www.alura.com.br/artigos/devops-o-que-e
+  - O que é Cloud: https://www.alura.com.br/artigos/cloud
+  - Plataformas úteis de Cloud:https://www.alura.com.br/artigos/heroku-vercel-outras-opcoes-cloud-plataforma
+  - 
 
+    
 ---
 ## 🧛🏽‍♀️ Feito por:
 Sanara Maciel Felício
