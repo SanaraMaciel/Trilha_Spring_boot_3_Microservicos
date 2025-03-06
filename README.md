@@ -7,14 +7,15 @@ Trilha de cursos e projetos pessoais em Spring Boot 3 com diversas implementaç�
 
 ## 🛠️ Tecnologias Utilizadas
 
-- Spring Boot ![Spring Boot](https://img.shields.io/badge/Spring_Boot-green)
-- SpringDoc (Swagger) ![SpringDoc](https://img.shields.io/badge/SpringDoc-blue)
+- Spring Boot ![Spring Boot] https://img.shields.io/docker/cloud/automated/:user/:repo
+- SpringDoc (Swagger) 
 - Maven ![Maven](https://img.shields.io/badge/Maven-orange)
 - MySQL ![MySQL](https://img.shields.io/badge/MySQL-blue)
 - JUnit ![JUnit](https://img.shields.io/badge/JUnit-red)
 - Mockito ![Mockito](https://img.shields.io/badge/Mockito-yellow)
 - Spting Cloud ![Spring Cloud](https://spring.io/projects/spring-cloud)
-- - IaC - Infraestrutura como Código
+- IaC - Infraestrutura como Código
+
 ## 📚 Tópicos Abordados
 
 - Programação reativa e assíncrona com Spring
