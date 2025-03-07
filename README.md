@@ -35,6 +35,8 @@ Trilha de cursos e projetos pessoais em Spring Boot 3 com diversas implementaç�
   - O que é DevOPS: https://www.alura.com.br/artigos/devops-o-que-e
   - O que é Cloud: https://www.alura.com.br/artigos/cloud
   - Plataformas úteis de Cloud:https://www.alura.com.br/artigos/heroku-vercel-outras-opcoes-cloud-plataforma
+  - Documentação da AWS: https://docs.aws.amazon.com/pt_br/
+  - Guia CDK AWS: https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html
   - 
 
     
