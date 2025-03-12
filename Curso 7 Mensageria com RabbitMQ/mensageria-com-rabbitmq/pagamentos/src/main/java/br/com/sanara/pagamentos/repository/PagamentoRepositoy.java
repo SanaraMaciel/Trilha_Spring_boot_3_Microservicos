@@ -1,6 +1,6 @@
-package br.com.alurafood.pagamentos.repository;
+package br.com.sanara.pagamentos.repository;
 
-import br.com.alurafood.pagamentos.model.Pagamento;
+import br.com.sanara.pagamentos.model.Pagamento;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface PagamentoRepositoy extends JpaRepository<Pagamento, Long> {

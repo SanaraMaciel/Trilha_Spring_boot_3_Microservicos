@@ -1,4 +1,4 @@
-package br.com.alurafood.pagamentos.config;
+package br.com.sanara.pagamentos.config;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

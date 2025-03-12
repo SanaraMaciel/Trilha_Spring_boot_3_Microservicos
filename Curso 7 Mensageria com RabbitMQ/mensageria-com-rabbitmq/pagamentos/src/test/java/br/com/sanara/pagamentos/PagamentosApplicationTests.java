@@ -1,4 +1,4 @@
-package br.com.alurafood.pagamentos;
+package br.com.sanara.pagamentos;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

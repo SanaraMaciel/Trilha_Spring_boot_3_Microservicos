@@ -1,10 +1,10 @@
-package br.com.alurafood.pagamentos.service;
+package br.com.sanara.pagamentos.service;
 
-import br.com.alurafood.pagamentos.dto.PagamentoDto;
-import br.com.alurafood.pagamentos.http.PedidoClient;
-import br.com.alurafood.pagamentos.model.Pagamento;
-import br.com.alurafood.pagamentos.model.Status;
-import br.com.alurafood.pagamentos.repository.PagamentoRepositoy;
+import br.com.sanara.pagamentos.dto.PagamentoDto;
+import br.com.sanara.pagamentos.http.PedidoClient;
+import br.com.sanara.pagamentos.model.Pagamento;
+import br.com.sanara.pagamentos.model.Status;
+import br.com.sanara.pagamentos.repository.PagamentoRepositoy;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

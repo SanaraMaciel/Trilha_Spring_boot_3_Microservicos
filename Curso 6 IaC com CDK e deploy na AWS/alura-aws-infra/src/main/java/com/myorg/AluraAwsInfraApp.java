@@ -18,12 +18,13 @@ public class AluraAwsInfraApp {
 
         //RDS para acessar o nosso banco de dados
         AluraRdsStack rdsStack = new AluraRdsStack(app, "Rds", vpcStack.getVpc());
-        rdsStack.addDependency(vpcStack);
+        rdsStack.addDependency(clusterStack);
 
 
         //Service
         AluraServiceStack aluraServiceStack = new AluraServiceStack(app, "Service", clusterStack.getCluster());
         aluraServiceStack.addDependency(clusterStack); //para fazer com que o service so inicie apos o cluster
+        aluraServiceStack.addDependency(rdsStack);//informa que o service tem dependencia da rds devido ao banco de dados
 
         app.synth();
     }

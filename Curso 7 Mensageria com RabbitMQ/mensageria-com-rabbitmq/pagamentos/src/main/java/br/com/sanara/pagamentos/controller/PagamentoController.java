@@ -1,7 +1,7 @@
-package br.com.alurafood.pagamentos.controller;
+package br.com.sanara.pagamentos.controller;
 
-import br.com.alurafood.pagamentos.dto.PagamentoDto;
-import br.com.alurafood.pagamentos.service.PagamentoService;
+import br.com.sanara.pagamentos.dto.PagamentoDto;
+import br.com.sanara.pagamentos.service.PagamentoService;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

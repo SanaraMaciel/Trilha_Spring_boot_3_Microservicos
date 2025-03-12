@@ -1,6 +1,6 @@
-package br.com.alurafood.pagamentos.dto;
+package br.com.sanara.pagamentos.dto;
 
-import br.com.alurafood.pagamentos.model.Status;
+import br.com.sanara.pagamentos.model.Status;
 import lombok.Getter;
 import lombok.Setter;
 
