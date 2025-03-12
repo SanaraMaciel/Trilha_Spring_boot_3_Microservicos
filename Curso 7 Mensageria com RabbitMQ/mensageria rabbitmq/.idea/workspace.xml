@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a557973c-c65a-4517-a400-cb3589d34d7e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../2731-mensageria-com-rabbitmq-branch_inicial.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/.idea/mensageria-com-rabbitmq.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/.idea/sonarlint.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/gateway/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/gateway/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/gateway/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/gateway/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/gateway/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/gateway/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/gateway/src/main/java/br/com/alurafood/gateway/GatewayApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/gateway/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/gateway/src/test/java/br/com/alurafood/gateway/GatewayApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pagamentos/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pagamentos/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pagamentos/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pagamentos/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pagamentos/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pagamentos/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pagamentos/src/main/java/br/com/sanara/pagamentos/PagamentosApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pagamentos/src/main/java/br/com/sanara/pagamentos/amqp/PagamentoAMQPConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pagamentos/src/main/java/br/com/sanara/pagamentos/config/Configuracao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pagamentos/src/main/java/br/com/sanara/pagamentos/controller/PagamentoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pagamentos/src/main/java/br/com/sanara/pagamentos/dto/PagamentoDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pagamentos/src/main/java/br/com/sanara/pagamentos/http/PedidoClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pagamentos/src/main/java/br/com/sanara/pagamentos/model/Pagamento.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pagamentos/src/main/java/br/com/sanara/pagamentos/model/Status.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pagamentos/src/main/java/br/com/sanara/pagamentos/repository/PagamentoRepositoy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pagamentos/src/main/java/br/com/sanara/pagamentos/service/PagamentoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pagamentos/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pagamentos/src/main/resources/db/migration/V1__criar_tabela_pagamentos.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pagamentos/src/test/java/br/com/sanara/pagamentos/PagamentosApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pedidos/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pedidos/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pedidos/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pedidos/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pedidos/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pedidos/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pedidos/src/main/java/br/com/alurafood/pedidos/PedidosApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pedidos/src/main/java/br/com/alurafood/pedidos/config/Configuracao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pedidos/src/main/java/br/com/alurafood/pedidos/controller/PedidoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pedidos/src/main/java/br/com/alurafood/pedidos/dto/ItemDoPedidoDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pedidos/src/main/java/br/com/alurafood/pedidos/dto/PedidoDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pedidos/src/main/java/br/com/alurafood/pedidos/dto/StatusDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pedidos/src/main/java/br/com/alurafood/pedidos/model/ItemDoPedido.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pedidos/src/main/java/br/com/alurafood/pedidos/model/Pedido.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pedidos/src/main/java/br/com/alurafood/pedidos/model/Status.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pedidos/src/main/java/br/com/alurafood/pedidos/repository/PedidoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pedidos/src/main/java/br/com/alurafood/pedidos/service/PedidoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pedidos/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pedidos/src/main/resources/db/migration/V1__cria_tabela_pedidos.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pedidos/src/main/resources/db/migration/V2__cria_tabela_item_pedido.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/pedidos/src/test/java/br/com/alurafood/pedidos/PedidosApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/server/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/server/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/server/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/server/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/server/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/server/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/server/src/main/java/br/com/alurafood/server/ServerApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/server/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mensageria-com-rabbitmq/server/src/test/java/br/com/alurafood/server/ServerApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rabbit/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../rabbit/docker-compose.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2uDn6sHDRl53mRzl1qFVsYBBwz0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/l/disk0/sanara/Documentos/Cursos/spring_boot_3/Curso 7 Mensageria com RabbitMQ/mensageria rabbitmq",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a557973c-c65a-4517-a400-cb3589d34d7e" name="Changes" comment="" />
+      <created>1741791839618</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1741791839618</updated>
+    </task>
+    <servers />
+  </component>
+</project>
