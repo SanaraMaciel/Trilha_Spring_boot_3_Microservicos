@@ -50,10 +50,11 @@ public class PagamentoController {
 
         //faz o envio para o RabbitMQ com mensagem
         //Message message = new Message(("Criei um pagamento com o id " + pagamento.getId()).getBytes());
-
         //faz o envio para o RabbitMQ com pagamento DTO
-        rabbitTemplate.convertAndSend("pagamento.concluido", pagamento);
+        //rabbitTemplate.convertAndSend("pagamento.concluido", pagamento);
 
+        //ao invés de fazer o envio para a fila criada faz o envio para a exchange pagamentos.ex
+        rabbitTemplate.convertAndSend("pagamentos.ex","", pagamento);
 
         return ResponseEntity.created(endereco).body(pagamento);
     }
