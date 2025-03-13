@@ -50,7 +50,8 @@ public class PagamentoController {
 
         //faz o envio para o RabbitMQ
         Message message = new Message(("Criei um pagamento com o id " + pagamento.getId()).getBytes());
-        rabbitTemplate.send("pagamento.concluido", message);
+
+        rabbitTemplate.convertAndSend("pagamento.concluido", pagamento);
 
 
         return ResponseEntity.created(endereco).body(pagamento);

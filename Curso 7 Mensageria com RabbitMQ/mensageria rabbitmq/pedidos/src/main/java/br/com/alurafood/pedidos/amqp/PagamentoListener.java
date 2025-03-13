@@ -1,0 +1,15 @@
+package br.com.alurafood.pedidos.amqp;
+
+import org.springframework.amqp.core.Message;
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.stereotype.Component;
+
+@Component
+public class PagamentoListener {
+
+    @RabbitListener(queues = "pagamento.concluido") //anotacao de listener que escutara a fila pagamento concluido
+    public void recebeMensagem(Message mensagem) {
+        System.out.println("Recebi a mensagem " + mensagem.toString());
+    }
+
+}
