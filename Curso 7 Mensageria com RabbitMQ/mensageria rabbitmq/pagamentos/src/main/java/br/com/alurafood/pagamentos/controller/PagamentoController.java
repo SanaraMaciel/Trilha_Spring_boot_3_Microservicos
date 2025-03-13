@@ -48,9 +48,10 @@ public class PagamentoController {
         PagamentoDto pagamento = service.criarPagamento(dto);
         URI endereco = uriBuilder.path("/pagamentos/{id}").buildAndExpand(pagamento.getId()).toUri();
 
-        //faz o envio para o RabbitMQ
-        Message message = new Message(("Criei um pagamento com o id " + pagamento.getId()).getBytes());
+        //faz o envio para o RabbitMQ com mensagem
+        //Message message = new Message(("Criei um pagamento com o id " + pagamento.getId()).getBytes());
 
+        //faz o envio para o RabbitMQ com pagamento DTO
         rabbitTemplate.convertAndSend("pagamento.concluido", pagamento);
 
 
