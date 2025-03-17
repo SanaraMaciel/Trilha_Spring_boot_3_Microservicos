@@ -1,0 +1,31 @@
+version: '3.4'
+
+services:
+  postgres:
+    image: postgres
+    container_name: container-postgresql
+    environment:
+      POSTGRES_DB: codechella
+      POSTGRES_USER: usuario
+      POSTGRES_PASSWORD: senha
+    ports:
+      - "5432:5432"
+
+  codechella-webflux:
+    image: docker.io/sanara2707/codechella-webflux:latest
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    depends_on:
+      - postgres
+    ports:
+      - 8080:8080
+    volumes:
+      - .:/app
+    environment:
+      SPRING_R2DBC_URL: r2dbc:postgresql://postgres:5432/codechella
+      SPRING_R2DBC_USERNAME: usuario
+      SPRING_R2DBC_PASSWORD: senha
+      SPRING_FLYWAY_URL: jdbc:postgresql://postgres:5432/codechella
+      SPRING_FLYWAY_USER: usuario
+      SPRING_FLYWAY_PASSWORD: senha
