@@ -13,13 +13,13 @@ public record EventoDto(Long id,
                 evento.getData(), evento.getDescricao());
     }
 
-    public Evento toEntity() {
+    public Evento toEntity(EventoDto eventoDto) {
         Evento evento = new Evento();
-        evento.setId(this.id);
-        evento.setNome(this.nome);
-        evento.setTipo(this.tipo);
-        evento.setData(this.data);
-        evento.setDescricao(this.descricao);
+        evento.setId(eventoDto.id);
+        evento.setNome(eventoDto.nome);
+        evento.setTipo(eventoDto.tipo);
+        evento.setData(eventoDto.data);
+        evento.setDescricao(eventoDto.descricao);
         return evento;
     }
 

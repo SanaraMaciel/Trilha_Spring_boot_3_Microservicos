@@ -30,7 +30,7 @@ public class EventoService {
 
 
     public Mono<EventoDto> cadastrar(EventoDto dto) {
-        return repositorio.save(dto.toEntity())
+        return repositorio.save(dto.toEntity(dto))
                 .map(EventoDto::toDto);
     }
 

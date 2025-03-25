@@ -1,6 +1,7 @@
 package br.com.sanara.codechella;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
@@ -40,6 +41,7 @@ public class EventoController {
 
 
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED) //forca retornar o status 201 se cadastrar o show
     public Mono<EventoDto> cadastrar(@RequestBody EventoDto dto) {
         //se o cadastro for feito com sucesso doOnSucess ele vai enviar esse evento para o eventoSink
         return servico.cadastrar(dto)
