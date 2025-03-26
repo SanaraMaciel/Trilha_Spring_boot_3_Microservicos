@@ -56,6 +56,7 @@ public class ImportacaoJobConfiguration {
         return new StepBuilder("passo-inicial", jobRepository)
                 .<Importacao, Importacao>chunk(200, transactionManager)
                 .reader(reader) //faz a leitura
+                .processor(processor()) //chama o processor para fazer o processamento de dados nesse caso adicionar o valor de taxa
                 .writer(writer) //faz a escrita
                 .build();
     }
@@ -92,11 +93,20 @@ public class ImportacaoJobConfiguration {
         return new JdbcBatchItemWriterBuilder<Importacao>()
                 .dataSource(dataSource)
                 .sql(
-                        "INSERT INTO importacao (cpf, cliente, nascimento, evento, data, tipo_ingresso, valor, hora_importacao) VALUES" +
-                                " ( :cpf, :cliente, :nascimento, :evento, :data, :tipoIngresso, :valor, :horaImportacao )"
+                        "INSERT INTO importacao (cpf, cliente, nascimento, evento, data, tipo_ingresso, valor, hora_importacao, taxa_adm) VALUES" +
+                                " ( :cpf, :cliente, :nascimento, :evento, :data, :tipoIngresso, :valor, :horaImportacao, :taxaAdm )"
                 )
                 .itemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider<>()) //indica da onde esta vindo os parametros que e do ben de leitura do arquivo
                 .build();
+    }
+
+    /**
+     * Item processor para fazer a execução de processos durante a execução do step
+     * @return
+     */
+    @Bean
+    public ImportacaoProcessor processor() {
+        return new ImportacaoProcessor();
     }
 
 }
