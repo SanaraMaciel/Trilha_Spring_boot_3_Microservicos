@@ -76,7 +76,7 @@ public class ImportacaoJobConfiguration {
     public ItemReader<Importacao> reader() {
         return new FlatFileItemReaderBuilder<Importacao>()
                 .name("leitura-csv")
-                .resource(new FileSystemResource("files/dados.csv"))
+                .resource(new FileSystemResource("files/dadosanterior.csv"))
                 .comments("--") //faz com q se quiser passar um comentario toda linha q inicia com -- é uma linha de comentario
                 .delimited()
                 .delimiter(";") //informa o tipo de limitador o arquivo usa nesse caso eh ;
