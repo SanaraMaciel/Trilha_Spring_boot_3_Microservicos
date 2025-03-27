@@ -15,7 +15,10 @@ Trilha de cursos e projetos pessoais em Spring Boot 3 com diversas implementaç�
 - Mockito 
 - Spting Cloud 
 - IaC - Infraestrutura como Código
-- CDK - Cloud Development Kit 
+- CDK - Cloud Development Kit
+- Spring Batch -  Processamento em lote
+- Spring WebFlux
+- RabbitMQ
 
 ## 📚 Tópicos Abordados
 
