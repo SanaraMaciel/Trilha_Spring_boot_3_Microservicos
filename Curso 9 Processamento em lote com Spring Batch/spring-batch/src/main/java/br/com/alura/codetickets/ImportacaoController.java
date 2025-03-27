@@ -21,7 +21,8 @@ public class ImportacaoController {
     private Job job;
 
     @GetMapping("/importar")
-    public void importaArquivo() throws JobInstanceAlreadyCompleteException, JobExecutionAlreadyRunningException, JobParametersInvalidException, JobRestartException {
+    public void importaArquivo() throws JobInstanceAlreadyCompleteException, JobExecutionAlreadyRunningException,
+            JobParametersInvalidException, JobRestartException {
         JobParameters jobParameters = new JobParameters();
         jobLauncher.run(job, jobParameters);
     }
