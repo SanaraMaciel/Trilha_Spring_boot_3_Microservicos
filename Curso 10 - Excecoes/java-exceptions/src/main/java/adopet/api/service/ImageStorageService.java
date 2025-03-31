@@ -12,23 +12,18 @@ public class ImageStorageService {
 
     private static final String PASTA_UPLOAD = System.getProperty("user.dir") + "/src/main/resources/storage/";
 
-    public String upload(MultipartFile imagem) {
+    public String upload(MultipartFile imagem) throws IOException {
 
         String novoNome = this.gerarNovoNome(imagem.getOriginalFilename());
 
         String caminhoCompletoDoArquivo = PASTA_UPLOAD + novoNome;
 
-        try {
-            imagem.transferTo(new File(caminhoCompletoDoArquivo));
-        }catch (IOException e){
-            throw new RuntimeException(e);
-        }
+        imagem.transferTo(new File(caminhoCompletoDoArquivo));
 
         return novoNome;
     }
 
-    private String gerarNovoNome(String nomeOriginal)
-    {
+    private String gerarNovoNome(String nomeOriginal) {
         String[] nomeSplit = nomeOriginal.split("\\.");
         String extensao = "." + nomeSplit[1];
 
