@@ -13,7 +13,7 @@ public class Transformator {
         Class<?> source = input.getClass();
 
         //transforma uma classe em outra adicionando o prefixo DTO
-        Class<?> target = Class.forName(source + "DTO");
+        Class<?> target = Class.forName(source.getName() + "DTO");
 
         //busca o construtor dessa classe
         O targetClass = (O) target.getDeclaredConstructor().newInstance();
@@ -27,12 +27,12 @@ public class Transformator {
         //percorrendo todos os campos da classe
         Arrays.stream(sourceFields).forEach(sourceField ->
                 Arrays.stream(targetFields).forEach(targetField -> {
-                            validate(sourceField, targetField); //funcao que valida os campos
                             try {
+                                validate(sourceField, targetField); //funcao que valida os campos
                                 targetField.set(targetClass, sourceField.get(input)); //seta o valor na classe dto conforme veio no input
                             } catch (IllegalAccessException e) {
                                 e.printStackTrace();
-                                throw new RuntimeException(e);
+                                //throw new RuntimeException(e);
                             }
                         }
                 ));

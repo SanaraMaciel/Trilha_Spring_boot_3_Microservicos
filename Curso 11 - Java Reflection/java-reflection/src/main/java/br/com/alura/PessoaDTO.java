@@ -2,28 +2,28 @@ package br.com.alura;
 
 public class PessoaDTO {
 
-    public PessoaDTO(String nome, String cpf) {
-        this.nome = nome;
-        this.cpf = cpf;
-    }
+    /**
+     * removido porque quem faz essa construção é a classe de reflection
+     * public PessoaDTO(String nome, String cpf) {
+     * this.nome = nome;
+     * this.cpf = cpf;
+     * }
+     */
 
+    private Integer id;
     private String nome;
     private String cpf;
 
+    public Integer getId() {
+        return id;
+    }
 
     public String getNome() {
         return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
     }
 
     public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
 }
