@@ -16,8 +16,18 @@ public class AppBanco {
         //inicia as threads
         saqueJoao.start();
         saqueMaria.start();
-
         System.out.println(Thread.currentThread().getName());
+
+
+        try {
+            saqueJoao.join();
+            saqueMaria.join();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+
+        System.out.println("saldo final" + conta.getSaldo());
 
     }
 }
