@@ -1,0 +1,238 @@
+{
+	"info": {
+		"_postman_id": "07c04b8a-8c2f-4c31-9465-ac9c8f0d4f18",
+		"name": "Loja",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18045374"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"admin@email.com.br\",\r\n    \"senha\":\"123456\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastro de produto",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBUEkgQURPUEVUIFNUT1JFIiwic3ViIjoiYWRtaW5AZW1haWwuY29tLmJyIiwibm9tZSI6IkFkbWluaXN0cmFkb3IiLCJleHAiOjE3MDY5MDY5MjB9.lJF7pGwZpTkYULdAdXKZDx9QBtb_pdn4zL3s8ntG9O0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\":\"Joguinho Interativo para Pássaros\",\r\n    \"descricao\":\"Brinquedo interativo para estimular pássaros\",\r\n    \"categoria\": \"Acessorios\",\r\n    \"preco\": 20.00,\r\n    \"estoqueInicial\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/admin/produtos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"produtos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualiza estoque",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBUEkgQURPUEVUIFNUT1JFIiwic3ViIjoiYWRtaW5AZW1haWwuY29tLmJyIiwibm9tZSI6IkFkbWluaXN0cmFkb3IiLCJleHAiOjE3MDcwMTQzMjd9.PCDNEDOsQg-nhj21MC0Qz4J93L865Sw_honU6QaYXI8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idProduto\": 4,\r\n    \"quantidade\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/admin/estoques",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"estoques"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar pedido",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBUEkgQURPUEVUIFNUT1JFIiwic3ViIjoiY29tcHJhZG9yQGVtYWlsLmNvbS5iciIsIm5vbWUiOiJDb21wcmFkb3IiLCJleHAiOjE3MDYyMjE2NDd9.61_BEdkSdzkEjMRi6yKzDiAPidad3jnsOCvi7k8SlPw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"itens\":[\r\n        {\r\n            \"produtoId\":1,\r\n            \"quantidade\":10\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/pedidos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pedidos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar produtos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBUEkgQURPUEVUIFNUT1JFIiwic3ViIjoiYWRtaW5AZW1haWwuY29tLmJyIiwibm9tZSI6IkFkbWluaXN0cmFkb3IiLCJleHAiOjE3MDY5MDY5MjB9.lJF7pGwZpTkYULdAdXKZDx9QBtb_pdn4zL3s8ntG9O0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/admin/produtos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"produtos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir produto",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBUEkgQURPUEVUIFNUT1JFIiwic3ViIjoiYWRtaW5AZW1haWwuY29tLmJyIiwibm9tZSI6IkFkbWluaXN0cmFkb3IiLCJleHAiOjE3MDYyMjA4OTR9.MaYuhP2hsYxQ48iH0ou4U6ClgCFby8nWiaccGh589V8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/admin/produtos/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"produtos",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar estoques",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBUEkgQURPUEVUIFNUT1JFIiwic3ViIjoiYWRtaW5AZW1haWwuY29tLmJyIiwibm9tZSI6IkFkbWluaXN0cmFkb3IiLCJleHAiOjE3MDY5MDY5MjB9.lJF7pGwZpTkYULdAdXKZDx9QBtb_pdn4zL3s8ntG9O0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/admin/estoques",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"estoques"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
