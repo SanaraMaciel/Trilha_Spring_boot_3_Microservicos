@@ -1,12 +1,6 @@
 package br.com.alura.adopetstore.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.MapsId;
-import jakarta.persistence.OneToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.util.Objects;
 
@@ -19,6 +13,11 @@ public class Estoque {
     private Integer quantidade;
     @OneToOne
     private Produto produto;
+
+    //atributo que representa o lock
+    //A anotacao Version informa ao spring boot que o atributo é um atributo versionado
+    @Version
+    private Integer versao;
 
     public Estoque(){}
 
@@ -33,6 +32,10 @@ public class Estoque {
 
     public Integer getQuantidade() {
         return quantidade;
+    }
+
+    public Integer getVersao() {
+        return versao;
     }
 
     public Produto getProduto() {

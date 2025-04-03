@@ -14,4 +14,5 @@ public interface EstoqueRepository extends JpaRepository<Estoque, Long> {
     List<Estoque> findAll();
     @Query("SELECT e.produto FROM Estoque e WHERE e.quantidade = 0")
     List<Produto> produtosComEstoqueZerado();
+
 }
