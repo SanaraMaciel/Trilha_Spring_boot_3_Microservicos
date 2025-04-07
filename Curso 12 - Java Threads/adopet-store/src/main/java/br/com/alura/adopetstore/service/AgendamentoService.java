@@ -38,6 +38,5 @@ public class AgendamentoService {
         //System.out.println(estoqueZerado);
         //System.out.println(faturamentoObtido);
 
-
     }
 }
